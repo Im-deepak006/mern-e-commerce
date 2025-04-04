@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sambhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            font-family:'poppins','sans-serif' ;
+        }
+        body {
+            width:100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+        .container-fluid {
+            display: flex;
+            height:100vh;
+            width: 100%;
+            max-width: 1200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+           background-image :linear-gradient(to right, rgb(234, 88, 12), rgb(251, 146, 60));
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .left-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: #fff;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+           
+        }
+        .login-box input {
+            margin-bottom: 15px;
+        }
+        .login-box .btn {
+            width: 100%;
+            background-image :linear-gradient(to right, rgb(234, 88, 12), rgb(251, 146, 60));
+            border: none;
+            padding: 10px;
+        }
+        .login-box .btn:hover {
+            background-image :linear-gradient(to right,rgb(251, 146, 60), rgb(234, 88, 12));
+        }
+        .forgot-password {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .t1{
+            position: relative;
+            top:190px;
+            right:30px;
+        }
+        .t4{
+            position: relative;
+            top:250px;
+            left:60px;
+
+        }
+        .t3{
+            position: relative;
+           right:220px;
+           bottom:250px;
+        }
+        .t2{
+            position: relative;
+            bottom:190px;
+            left:280px;
+        }
+        .t12{
+            position: relative;
+            bottom:280px;
+            left:150px
+        }
+        .t13{
+            position: relative;
+            top:280px;
+            right:100px
+        }
+        .t11{
+            position: relative;
+            top:20px;
+            right:1px;
+            bottom:0;
+            left:0;
+        }
+        .t21{
+            position: relative;
+            top:100px;
+            right: 100px;
+            left:50px;
+        }
+        .t22{
+            position: relative;
+            bottom: 400px;;
+            left:0;
+        }
+        .t23{
+            position: relative;
+            top:200px;
+            right:500px;
+            
+        }
+         .t24{
+            position: relative;
+            bottom:200px;
+            left:150px;
+        }
+        .t31{
+            position: relative;
+            bottom:70px;
+            left:300px;
+        }
+        .t32{
+            position:relative ;
+            right:220px;
+            bottom: 200px;
+        }
+        .t33{
+            position:relative ;
+            bottom: 400px;
+        }
+        .t34{
+            position: relative;
+            top:250px;
+            right:70px;
+
+        }
+        .t41{
+            position: relative;
+            top:150px;
+            left:140px;
+        }
+        .t42{
+            position: relative;
+            bottom: 370px;
+            left:230px
+        }
+        .t43{
+            position: relative;
+            top:40px;
+            right:60px
+        }
+        .t44{
+            position:relative ;
+            right:340px;
+            bottom: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="left-section">
+            <a href="bootstrap.html"><img src="sambhaar.png" alt="Sambhar Logo" width="200" style="position: relative;bottom:220px;right: 160px;z-index: 99;"></a>
+            <h1>Sambhaar.com</h1>
+            <p>Fresh Finds for Your Pantry and Home</p>
+        <div class="langu">
+            <span class="t1"><strong>வணக்கம்</strong></span><span class="t2"><strong>வணக்கம்</strong></span><span class="t3"><strong>வணக்கம்</strong></span><span class="t4"><strong>வணக்கம்</strong></span>
+            <span class="t11"><strong>സ്വാഗതം</strong></span><span class="t12"><strong>സ്വാഗതം</strong></span><span class="t13"><strong>സ്വാഗതം</strong></span><span class="t14"><strong>സ്വാഗതം</strong></span>
+            <span class="t21"><strong>स्वागत है</strong></span><span class="t22"><strong>स्वागत है</strong></span><span class="t23"><strong>स्वागत है</strong></span><span class="t24"><strong>स्वागत है</strong></span>
+            <span class="t31"><strong>స్వాగతం</strong></span><span class="t32"><strong>స్వాగతం</strong></span><span class="t33"><strong>ಸ್ವಾಗತ</strong></span><span class="t34"><strong>ಸ್ವಾಗತ</strong></span>
+            <span class="t41"><strong>Namaste</strong></span><span class="t42"><strong>Namaste</strong></span><span class="t43"><strong>Welcome</strong></span><span class="t44"><strong>Welcome</strong></span>
+            
+            </div></div>
+        <div class="right-section">
+            <div class="login-box">
+                <form action="">
+                <h3><strong>Welcome Back to</strong> <span style="color: #ff5100;"><strong>sambhaar.com</strong></span></h3>
+                <input type="email" class="form-control" placeholder="Email Address" required>
+                <input type="password" class="form-control" placeholder="Password" required>
+                <div class="forgot-password">
+                    <a href="#" style="color: #EA580C;">Forgot Password?</a>
+                </div>
+                <button class="btn btn-primary">Login</button>
+                <p class="mt-3">Don't have an account? <a href="register.html" style="color: #ff5100;">Register</a></p>
+           </form> </div>
+            
+        </div>
+    </div>
+</body>
+</html>

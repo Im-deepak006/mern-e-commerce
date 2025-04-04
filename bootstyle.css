@@ -1,0 +1,19 @@
+*{
+  font-family:'poppins','sans-serif' ;
+}
+body {
+ background-color: #f8f9fa;
+ 
+}
+.navbar {
+ background-color:white;
+}
+.marquee {
+background-image:linear-gradient(to right bottom, rgb(214, 75, 0),rgb(251, 146, 60));
+ color:white;
+ padding: 1px;
+ font-size: 16px;
+ font-weight: bold;
+ white-space: nowrap;
+ overflow: hidden;
+}

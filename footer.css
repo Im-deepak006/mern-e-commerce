@@ -1,0 +1,53 @@
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+}
+.foot .container {
+    max-width: 1200px;
+    margin: auto;
+}
+.foot .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot .col-md-3 {
+    width: 23%;
+}
+.foot h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.foot ul {
+    list-style: none;
+    padding: 0;
+}
+.foot ul li {
+    margin-bottom: 8px;
+}
+.foot ul li a {
+    color: #333;
+    text-decoration: none;
+}
+.foot ul li a:hover {
+    color: #ff6600;
+}
+.foot .social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+.foot .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+.foot .social-icons a:hover {
+    color: #ff6600;
+}
+.foot p {
+    text-align: center;
+    margin-top: 20px;
+}

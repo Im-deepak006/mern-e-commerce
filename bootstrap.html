@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo-1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+        *{
+             font-family:'poppins','sans-serif' ;
+        }
+        body {
+            background-color: #f8f9fa;
+            
+        }
+        .navbar {
+            background-color:white;
+        }
+        .marquee {
+           background-image:  linear-gradient(to right bottom, rgb(214, 75, 0),rgb(251, 146, 60));
+            color:white;
+            padding: 1px;
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .carousel-item img {
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0;
+            width: 100%;
+            display: block;
+        
+            
+        }
+        .bannerCarousel{
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+        }
+       
+
+        .category-box {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .category-box:hover {
+            transform: scale(1.05);
+        }
+        .category-img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            background: #fff;
+            padding: 10px;
+        }
+        .category-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+       
+.campus-wrapper {
+            width: 90%;
+            margin: 50px auto;
+        }
+        .process-box {
+            
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .process-box_img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+.sidebar {
+      width: 300px; 
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      list-style:none;
+    }
+    .menu > li > input[type="checkbox"] {
+      display:none;
+    }
+    .menu-title {
+      display: block;
+      padding: 10px;
+      cursor: pointer;
+      font-family:'poppins',sans-serif ;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      transition: color 0.2s ease;
+    }
+    .menu-title:hover {
+      color:#EA580C;
+    }
+    .sub-menu {
+      list-style: none;
+      max-height: 0;             /* Initially hidden */
+      overflow: hidden;     /* Hide the content when collapsed */
+                 /* Indent sub-items */
+      transition: max-height 0.3s ease-out;
+    }
+    .menu > li > input[type="checkbox"]:checked ~ .sub-menu {
+      max-height: 500px;         /* Large enough to show all items */
+    }
+    .sub-menu li {
+      padding: 8px 10px;
+      margin-bottom: 5px;
+      transition: color 0.4s ease;
+    } 
+    .sub-menu li:hover{
+        color:#EA580C;
+    }
+    .sidewidth{
+        margin-left: 0;
+        width: 100%;}
+
+
+    .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease-in-out;
+            background: white;
+            width:167.675px;
+            height: 320px;
+     }
+     .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }.price {
+            color: #ff5722;
+            font-weight: bold;
+        }.discount {
+            background: orange;
+            color: white;
+            font-size: 12px;
+            padding: 2px 5px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 3px;
+            z-index: 3;
+        }
+        .cart-btn {
+            border: 1px solid #ff5722;
+            color: #ff5722;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .cart-btn:hover {
+            background: #ff5722;
+            color: white;
+        } .flex-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+            
+        }
+        .fix-img {
+            position: relative;
+            width: 480px;
+        }
+        .fix-img img {
+            width: 100%;
+            border-radius: 20px;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease-in-out;
+        }
+        .fix-img img:hover {
+            transform: scale(1.05);
+        }
+        .justbtn {
+            position: absolute;
+            background-image: linear-gradient(to right bottom, rgb(214, 75, 0), rgb(251, 146, 60));
+            left: 50px;
+            top: 150px;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-image 0.4s;
+        }
+        .justbtn:hover {
+            background-image: linear-gradient(to right bottom, rgb(251, 146, 60), rgb(214, 75, 0));
+        }
+        .cart-container {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image:  linear-gradient(to right bottom, rgb(214, 75, 0),rgb(251, 146, 60));
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    width: 6%;
+}
+
+.cart-container .cart-icon {
+    font-size: 20px;
+}
+
+.cart-container .cart-items {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.cart-total {
+    color: #EA580C;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    width: 180px;
+    height: 320px;
+    margin: 20px;
+}
+
+.product-card img {
+    width: 100px;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s;
+}
+
+.cart.open {
+    right: 0;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.cart-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-image:  linear-gradient(to right bottom, rgb(214, 75, 0),rgb(251, 146, 60));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#cart-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #EA580C;
+}
+
+.quantity-manager {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.quantity-manager button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-manager button:hover {
+    background-color: #ddd;
+}
+
+.quantity-manager span {
+    font-size: 16px;
+}
+#delete-btn{
+    border: none;
+    background:transparent;
+    position: relative;
+    left: 60%;
+}
+
+            </style>
+</head>
+<body>
+    <section class="sticky-top" style="z-index: 999;">
+        <marquee class="marquee">
+            <span style="margin-left: 8px;">Enjoy Same Day Delivery* across Thoraipakkam! ❤️</span>
+            <span style="margin-left: 20px;">Get Extra 10% Off* on Your 1st Order 🤯</span>
+            <span style="margin-left: 8px;">FREE* SHIPPING🚚 above 495₹ for all orders - BUY NOW</span>
+            <span style="margin-left: 8px;">Enjoy Same Day Delivery* across Thoraipakkam! ❤️</span>
+            <span style="margin-left: 8px;">Get Extra 10% Off* on Your 1st Order 🤯</span>
+            <span style="margin-left: 8px;">FREE* SHIPPING🚚 above 495₹ for all orders - BUY NOW</span></marquee>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="sambhaar.png" height="50px" width="250px" alt="S-Mart"></a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" >
+                        <li class="nav-item m-1"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item m-1"><a class="nav-link" href="#products">Products</a></li>
+                        <li class="nav-item m-1"><a class="nav-link" href="aboutuspage.html">About Us</a></li>
+                        <li class="nav-item m-1"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                        <li class="nav-item m-2"><a class=" btn" style="background-color: #EA580C; color: #fff;"  href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="cart-container" onclick="toggleCart()" style="z-index: 1000;">
+        <div class="cart-count">
+            <div class="cart-icon">🛒</div>
+            <div class="cart-items" id="cart-items-count">0 Items</div>
+        </div>
+        <div class="cart-total"><span id="cart-total-price">₹0</span></div>
+    </div>
+    <div id="bannerCarousel" class="carousel slide container-fluid mt-3" data-bs-ride="carousel"  >
+        <div class="carousel-inner ">
+            <div class="carousel-item active"><img src="banner3.png" class="d-block w-100" alt="Slide 1"></div>
+            <div class="carousel-item"><img src="banner2.png" class="d-block w-100" alt="Slide 2"></div>
+            <div class="carousel-item"><img src="banner1.png" class="d-block w-100" alt="Slide 3"></div>
+        </div>
+    </div>
+
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="Grocery-direy.png" alt="Grocery Essentials" class="category-img">
+                    <div class="category-title">Grocery Essentials</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="diary.png" alt="Dairy & Fresh Foods" class="category-img">
+                    <div class="category-title">Dairy & Fresh Foods</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="oil.png" alt="Oils & Condiments" class="category-img">
+                    <div class="category-title">Oils & Condiments</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="sweets.png" alt="Sweets & Savouries" class="category-img">
+                    <div class="category-title">Sweets & Savouries</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="Grocery-direy.png" alt="Grocery Essentials" class="category-img">
+                    <div class="category-title">Grocery Essentials</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="diary.png" alt="Dairy & Fresh Foods" class="category-img">
+                    <div class="category-title">Dairy & Fresh Foods</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="oil.png" alt="Oils & Condiments" class="category-img">
+                    <div class="category-title">Oils & Condiments</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-box">
+                    <img src="sweets.png" alt="Sweets & Savouries" class="category-img">
+                    <div class="category-title">Sweets & Savouries</div>
+                </div>
+            </div>
+        </div>
+      </div>  
+    <div class="campus-wrapper">
+        <div class="owl-carousel" id="campus-car">
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner1.png" alt="Sports and Gym">
+                        </div>
+                
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner.png" alt="Technical Clubs">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner2.png" alt="Cultural Clubs">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner4.png" alt="Professional Memberships">
+                        </div>
+                                        </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+
+    <div class="container-fluid sidewidth">
+        <div class="row">
+            <div class="col-lg-3 col-md-2   " >
+    
+      <div class="sidebar">
+        <ul class="menu">
+    
+          <!-- Grocery Essentials -->
+          <li>
+            <!-- Hidden checkbox to control the open/close state -->
+            <input type="checkbox" id="grocery-essentials" />
+            <!-- Label that acts like a "button" -->
+            <label for="grocery-essentials" class="menu-title">
+              Grocery Essentials
+            </label>
+    
+            <!-- Sub-menu (dropdown content) -->
+            <ul class="sub-menu">
+              <li>Atta, Sooji, Vermicelli & Flours</li>
+              <li>Dals & Pulses</li>
+              <li>Rice & Rice Products</li>
+              <li>Salt, Sugar & Jaggery</li>
+              <li>Noodles & Pasta</li>
+            </ul>
+          </li>
+    
+          <!-- Dairy & Fresh Foods -->
+          <li>
+            <input type="checkbox" id="dairy-fresh" />
+            <label for="dairy-fresh" class="menu-title">
+              Dairy & Fresh Foods
+            </label>
+            <ul class="sub-menu">
+              <li>Milk</li>
+              <li>Curd</li>
+              <li>Paneer</li>
+            </ul>
+          </li>
+    
+          <!-- Oils & Condiments -->
+          <li>
+            <input type="checkbox" id="oils-condiments" />
+            <label for="oils-condiments" class="menu-title">
+              Oils & Condiments
+            </label>
+            <ul class="sub-menu">
+              <li>Cooking Oil</li>
+              <li>Ghee</li>
+              <li>Spices</li>
+            </ul>
+          </li>
+    
+          <!-- Add more categories as needed... -->
+          <li>
+            <input type="checkbox" id="Sweets-Savouries" />
+            <label for="Sweets-Savouries" class="menu-title">
+                Sweets & Savouries
+            </label>
+            <ul class="sub-menu">
+              <li>Sweets & Chocolates</li>
+              <li>Namkeens</li>
+              <li>Nuts & Dry Fruits</li>
+              <li>Biscuits</li>
+              <li>Aroma</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="Beverages-Frozen" />
+            <label for="Beverages-Frozen" class="menu-title">
+                Beverages & Frozen Foods        </label>
+            <ul class="sub-menu">
+              <li>Beverages and Cool Drinks</li>
+              <li>Ice Creams</li>
+              <li>Frozen Foods
+            </li>
+              <li>Tea & Coffee</li>
+              <li>Health drink</li>
+              <li>Syrups & Supplement</li>
+              <li>Herbals</li>
+            </ul>
+          </li>
+    
+    
+          <li>
+            <input type="checkbox" id="Health-Personal" />
+            <label for="Health-Personal" class="menu-title">
+              Health & Personal Care
+    
+            </label>
+            <ul class="sub-menu">
+             <li>Beauty & Personal Care</li>
+             <li>Women Wellness</li>
+             <li>Men Wellness</li>
+             <li>Baby Care</li>
+             <li>Oral Care</li>
+             <li>Deodorant & Perfumes</li>
+            </ul>
+          </li>
+          
+        </ul>
+        <center><div class="btn border-1 p-2" style="color:#EA580C;border-color:#EA580C;">clear all</div></center>
+      </div>
+    
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-10"  id="products">
+        <h5 class="heading">Showing 1 to 20 of 2784 products</h5>
+        <div class="container mt-4 ">
+            <div class="row row-cols-5 g-4">
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="card-iteam1.jpg" alt="Karamani">
+                        <h5>Karamani</h5>
+                        <p>100g</p>
+                        <p class="price">₹18</p>
+                        <button class="cart-btn" onclick="addToCart('Karamani', 18, 'card-iteam1.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam2.jpg" alt="Green Pattani">
+                        <h5>Green Pattani</h5>
+                        <p>100g</p>
+                        <p class="price">₹25</p>
+                        <button class="cart-btn" onclick="addToCart('Green Pattani', 25, 'iteam2.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <span class="discount">3% Off</span>
+                        <img src="iteam3.png" alt="Kerala Papadam">
+                        <h5>Kerala Papadam</h5>
+                        <p>250g</p>
+                        <p><del>₹40</del> <span class="price">₹39</span></p>
+                        <button class="cart-btn" onclick="addToCart('Kerala Papadam', 39, 'iteam3.png')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <span class="discount">8% Off</span>
+                        <img src="iteam4.jpg" alt="Adukkumalli Idly Rice">
+                        <h5>Adukkumalli Idly Rice</h5>
+                        <p>1kg</p>
+                        <p><del>₹60</del> <span class="price">₹55</span></p>
+                        <button class="cart-btn" onclick="addToCart('Adukkumalli Idly Rice', 55, 'iteam4.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <span class="discount">6% Off</span>
+                        <img src="iteam5.jpg" alt="Moong Dhall">
+                        <h5>Moong Dhall</h5>
+                        <p>500g</p>
+                        <p><del>₹80</del> <span class="price">₹75</span></p>
+                        <button class="cart-btn" onclick="addToCart('Moong Dhall', 75, 'iteam5.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <!-- Additional Products with addToCart Function -->
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam6.jpg" alt="Moong Dhall">
+                        <h5>Moong Dhall</h5>
+                        <p>100g</p>
+                        <p class="price">₹18</p>
+                        <button class="cart-btn" onclick="addToCart('Moong Dhall', 18, 'iteam6.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam7.png" alt="Gram Dhall">
+                        <h5>Gram Dhall</h5>
+                        <p>100g</p>
+                        <p class="price">₹25</p>
+                        <button class="cart-btn" onclick="addToCart('Gram Dhall', 25, 'iteam7.png')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam10.png" alt="Vasambu">
+                        <h5>Vasambu</h5>
+                        <p>100g</p>
+                        <p class="price">₹18</p>
+                        <button class="cart-btn" onclick="addToCart('Vasambu', 18, 'iteam10.png')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam11.jpg" alt="Sukku">
+                        <h5>Sukku</h5>
+                        <p>100g</p>
+                        <p class="price">₹25</p>
+                        <button class="cart-btn" onclick="addToCart('Sukku', 25, 'iteam11.jpg')">🛒 Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card position-relative">
+                        <img src="iteam11.jpg" alt="Sukku">
+                        <h5>Sukku</h5>
+                        <p>100g</p>
+                        <p class="price">₹25</p>
+                        <button class="cart-btn" onclick="addToCart('Sukku', 25, 'iteam11.jpg')">🛒 Cart</button>
+                    </div>
+                </div>   
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <img src="iteam10.png" alt="Vasambu">
+                            <h5>Vasambu</h5>
+                            <p>100g</p>
+                            <p class="price">₹18</p>
+                            <button class="cart-btn" onclick="addToCart('Vasambu', 18, 'iteam10.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <img src="iteam11.jpg" alt="Sukku">
+                            <h5>Sukku</h5>
+                            <p>100g</p>
+                            <p class="price">₹25</p>
+                            <button class="cart-btn" onclick="addToCart('Sukku', 25, 'iteam11.jpg')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">3% Off</span>
+                            <img src="iteam12.jpg" alt="Chitharathai">
+                            <h5>Chitharathai</h5>
+                            <p>250g</p>
+                            <p><del>₹40</del> <span class="price">₹39</span></p>
+                            <button class="cart-btn" onclick="addToCart('Chitharathai', 39, 'iteam12.jpg')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">8% Off</span>
+                            <img src="iteam14.jpg" alt="Athimathuram">
+                            <h5>Athimathuram</h5>
+                            <p>1kg</p>
+                            <p><del>₹60</del> <span class="price">₹55</span></p>
+                            <button class="cart-btn" onclick="addToCart('Athimathuram', 55, 'iteam14.jpg')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">6% Off</span>
+                            <img src="iteam15.png" alt="Thippili">
+                            <h5>Thippili</h5>
+                            <p>500g</p>
+                            <p><del>₹80</del> <span class="price">₹75</span></p>
+                            <button class="cart-btn" onclick="addToCart('Thippili', 75, 'iteam15.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <img src="iteam16.png" alt="Kandan Thippili">
+                            <h5>Kandan Thippili</h5>
+                            <p>100g</p>
+                            <p class="price">₹18</p>
+                            <button class="cart-btn" onclick="addToCart('Kandan Thippili', 18, 'iteam16.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <img src="iteam17.png" alt="Fried Peanut">
+                            <h5>Fried Peanut</h5>
+                            <p>100g</p>
+                            <p class="price">₹25</p>
+                            <button class="cart-btn" onclick="addToCart('Fried Peanut', 25, 'iteam17.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">3% Off</span>
+                            <img src="iteam18.jpg" alt="Zip Lock Pouch">
+                            <h5>Zip Lock Pouch</h5>
+                            <p>250g</p>
+                            <p><del>₹40</del> <span class="price">₹39</span></p>
+                            <button class="cart-btn" onclick="addToCart('Zip Lock Pouch', 39, 'iteam18.jpg')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">8% Off</span>
+                            <img src="iteam19.png" alt="Reflect Dishwash">
+                            <h5>Reflect Dishwash</h5>
+                            <p>1kg</p>
+                            <p><del>₹60</del> <span class="price">₹55</span></p>
+                            <button class="cart-btn" onclick="addToCart('Reflect Dishwash', 55, 'iteam19.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="discount">6% Off</span>
+                            <img src="iteam20.png" alt="Lifebuoy Handwash">
+                            <h5>Lifebuoy Handwash</h5>
+                            <p>500g</p>
+                            <p><del>₹80</del> <span class="price">₹75</span></p>
+                            <button class="cart-btn" onclick="addToCart('Lifebuoy Handwash', 75, 'iteam20.png')">🛒 Cart</button>
+                        </div>
+                    </div>
+           </div>
+        </div>
+    </div></div>
+    <br><br>
+    <div class="flex-container">
+        <div class="fix-img">
+            <img src="promo-banner1.png" alt="Promo Banner">
+            <div class="btn border justbtn rounded-pill">Get now</div>
+        </div>
+        <div class="fix-img">
+            <img src="promo-banner2.png" alt="Promo Banner">
+            <div class="btn border justbtn rounded-pill">Get now</div>
+        </div>
+        <div class="fix-img">
+            <img src="promo-banner4.png" alt="Promo Banner">
+            <div class="btn border justbtn rounded-pill">Get now</div>
+        </div>
+    </div>
+
+
+
+<div class="foot">
+    <hr  style="border-style: solid;border-width: 3px;border-color: #dd3c06;">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> India | Qatar | UAE<br>
+                        <i class="fas fa-envelope"></i> support@sambhaar.com<br>
+                        <i class="fas fa-phone"></i> +91 818181 9368<br>
+                        <i class="fas fa-phone"></i> +91 818181 2912
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="aboutuspage.html">About Us</a></li>
+                        <li><a href="p&p.html">Privacy Policy</a></li>
+                        <li><a href="terms&condition.html">Terms & Conditions</a></li>
+                        <li><a href="return&refund.html">Return & Refund Policy</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Shop Now</h4>
+                    <ul>
+                        <li><a href="#">Grocery Essentials</a></li>
+                        <li><a href="#">Dairy & Fresh Foods</a></li>
+                        <li><a href="#">Oils & Condiments</a></li>
+                        <li><a href="#">Sweets & Savouries</a></li>
+                        <li><a href="#">Beverages & Frozen Foods</a></li>
+                        <li><a href="#">Health & Personal Care</a></li>
+                        <li><a href="#">Cleaning & Household</a></li>
+                        <li><a href="#">Pooja Essentials</a></li>
+                        <li><a href="#">Stationery & Fancy Items</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Reset Password</a></li>
+                    </ul>
+                    <h4>Download Our App</h4>
+                    <p>Coming Soon...!</p>
+                    <img src="google-play.png" alt="Google Play">
+                    <img src="app-store.png" alt="App Store">
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 Sambhaar.com. All Rights Reserved. | Powered by <a href="https://maverico.com">Maverico.com</a></p>
+        </div>
+    </footer>
+    <div class="cart" id="cart" style="z-index: 1001;">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content" id="cart-content"></div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price" id="total-price">₹0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class="ri-close-circle-fill" id="cart-close" onclick="toggleCart()"></i>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#campus-car").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+    <script >let cart = [];
+        const cartContent = document.getElementById("cart-content");
+        const totalPriceElement = document.getElementById("total-price");
+        const cartItemsCount = document.getElementById("cart-items-count");
+        const cartTotalPrice = document.getElementById("cart-total-price");
+        
+        function addToCart(name, price, image) {
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+            updateCart();
+        }
+        
+        function updateCart() {
+            cartContent.innerHTML = "";
+            let total = 0;
+            let itemCount = 0;
+        
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                itemCount += item.quantity;
+        
+                cartContent.innerHTML += `
+                    <div class="cart-box">
+                        <img src="${item.image}" width="50" alt="${item.name}">
+                        <div>
+                            <h5>${item.name}</h5>
+                           <!-- <p>₹${item.price} x ${item.quantity}</p> -->
+                            <div class="quantity-manager">
+                                <button onclick="updateQuantity(${index}, 'decrement')">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity(${index}, 'increment')">+</button>
+                            </div>
+                            <button  id="delete-btn"onclick="removeFromCart(${index})">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="delete" width="20">
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        
+            totalPriceElement.textContent = `₹${total}`;
+            cartTotalPrice.textContent = `₹${total}`;
+            cartItemsCount.textContent = `${itemCount} Items`;
+        }
+        
+        function updateQuantity(index, action) {
+            const item = cart[index];
+            if (action === 'increment') {
+                item.quantity++;
+            } else if (action === 'decrement' && item.quantity > 1) {
+                item.quantity--;
+            }
+            updateCart();
+        }
+        
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+        
+        function toggleCart() {
+            document.getElementById("cart").classList.toggle("open");
+        }
+        
+        </script>
+</body>
+</html>

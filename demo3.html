@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Example</title>
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .campus-wrapper {
+            width: 90%;
+            margin: 50px auto;
+        }
+        .process-box {
+            
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .process-box_img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="campus-wrapper">
+        <div class="owl-carousel" id="campus-car">
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner1.png" alt="Sports and Gym">
+                        </div>
+                
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner.png" alt="Technical Clubs">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner2.png" alt="Cultural Clubs">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="process-box">
+                        <div class="process-box_img">
+                            <img src="promo-banner4.png" alt="Professional Memberships">
+                        </div>
+                                        </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#campus-car").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

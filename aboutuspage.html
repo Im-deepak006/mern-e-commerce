@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambhaar - About Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="bootstyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: white;
+        }
+        .marquee {
+            background: linear-gradient(to right bottom, #d64b00, #fb923c);
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .full-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .heading {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .about-section {
+            margin-top: 30px;
+        }
+        .about-text {
+            text-align: justify;
+            padding: 20px;
+        }
+        .brand-logos img {
+            max-height: 80px;
+            margin: 10px;
+        }
+        .stats-section {
+            background-color: #f7941d;
+            color: white;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+        .stats-section div {
+            text-align: center;
+            padding: 10px;
+            border-right: 2px solid white;
+        }
+        .stats-section div:last-child {
+            border-right: none;
+        }
+        .why-choose-us {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .why-choose-us h4 {
+            color: #c74227;
+            font-weight: bold;
+        }
+        .content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 111, 0, 1); /* Strong Orange Border */
+            box-shadow: 0px 5px 15px rgba(255, 111, 0, 0.3); /* Orange Shadow with 30% Opacity */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content-box:hover {
+            box-shadow: 0px 10px 25px rgba(255, 111, 0, 0.5); /* Stronger Shadow on Hover */
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6f00;
+            text-align: center;
+        }
+        .green-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f8f9fa;
+        }
+
+        .green-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .feature-icon {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 15px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Green circle effect */
+        .feature-icon::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(76, 175, 80, 0.2);
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-box:hover .feature-icon::before {
+            transform: scale(1);
+        }
+
+        .feature-icon img {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Smooth transition for all sections */
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        .title{
+            position: relative;
+            bottom: 130px;
+            color: white;
+        }
+        p{
+            line-height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="sticky-top">
+        <marquee class="marquee">
+            Enjoy Same Day Delivery* across Thoraipakkam! ❤️ | Get Extra 10% Off* on Your 1st Order 🤯 | FREE* SHIPPING🚚 above ₹495 for all orders - BUY NOW
+        </marquee>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="sambhaar.png" height="50" width="250" alt="Sambhaar">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="bootstrap.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="btn text-white" style="background-color: #EA580C;" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div class="container-fluid">
+        <div class="full-banner">
+            <img src="aboutus.jpg" alt="About Sambhaar">
+        </div>
+        <div class="title" style="text-align: center;">
+            <h2><strong>About us</strong></h2><p>Home>about us</p></div>
+    </div>
+
+    <div class="container about-section">
+        <div class="heading">
+            <h2 class="text-warning"><strong>Sambhaar envisions evolving into India’s Favorite Grocer.</strong></h2>
+            <h4 class="text-danger">About Sambhaar</h4>
+        </div>
+
+        <div class="row align-items-center my-4">
+            <div class="col-md-6">
+                <img src="aboutus1.png" class="img-fluid rounded" alt="About Sambhaar">
+            </div>
+            <div class="col-md-6 about-text">
+                <p>“Sambhaar – Kirana ka Raja” is a brand that provides a premium grocery experience nationwide. With an interactive website and dedicated mobile apps, we serve customers across India.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container about-text">
+        <p><strong>“Sambhaar”</strong> is a brand that shall concentrate more on providing South Indian Specialty Foods and groceries. We Sambhaar shall ensure to cater to the South Indian public and to those who love south Indian food and grocery. All speciality foods and groceries from Tamilnadu, Kerala, Karnataka, Andhra & Telangana are handpicked by ensuring high standards of Quality.</p>
+        <p>“Sambhaar.com” shall be available both offline and online. “Sambhaar” plans to open a chain of premium stores in selected cities and to start “Sambhaar.com” has opened its first store in Chennai, Thane. Within a short span “Sambhaar.com” has become the favourite grocer of the people of Chennai..</p>
+        <p>“Sambhaar.com” shall also be available online under Sambhaar – Kirana ka Raja, @ www.sambhaar.com</p>
+       <p> Sambhaar.com is a Registered Trademark & Owned by Maverico Technologies Pvt Ltd.</p>
+
+        <p>Sambhaar.com Projects & Services opc Pvt Ltd is a subsidy of Maverico Technologies Pvt Ltd.</p>
+
+    <p>
+    Customer service is at heart and quality our commitment. Since our humble beginning, we have refined and developed our brand on the wants and needs of our loyal customers. From sourcing products and getting them delivered to the customer’s doorstep, we want our customers to have total confidence when ordering with us. We provide quality products at affordable prices.</p>
+
+     <p>We at Sambhaar strive to become India’s Favourite and best price online and offline superstore. Sambhaar uses its in-house technology platform to manage a network of over 1,500 farmers and wholesale distributors that enables Sambhaar.com to provide Quality products at an affordable price, mostly from manufacturers to customers directly. We deliver at your doorstep within hours. You save not only time but also money with our best prices and offer.</p>
+
+    <p>Sambhaar, Kirana ka Raja despite being premium brands, it’s affordable, it is a significant saving for its customers with quality and quantity being the top priority.</p>
+
+<p>The Founders Elayaraja Duraisamy & Sidharrth Rajah joined hands with multiple farm producers to give this grocery business a giant leap and branded this grocery business under the name and style “Sambhaar – Kirana ka Raja”.</p>
+    </div>
+
+    <div class="container text-center my-4">
+        <h4 class="text-danger"><strong>Who We Are</strong></h4>
+    </div>
+
+    <div class="container about-text">
+        <p>Sambhaar and MEELA’S are the brainchild of Sidharrth Rajah, who decided to start these brands in Mumbai, the business capital of India, intending to provide quality products to the common man at an affordable price. Our products go through multiple quality assessments, ensuring that only the best reach the end-users.</p>
+        <p>Sambhaar aims to manufacture, pack, and distribute selected quality products under the following brand names.</p>
+        <ul>
+            <li><strong>GBUBA</strong> - Kirana ka Ajuba - Indian Grocery</li>
+            <li><strong>MEELA’S SNAKJAK</strong> - South Indian Specialty Snacks & Sweets</li>
+            <li><strong>MEELA’S COCOSURE</strong> - Traditional Cold Pressed Coconut Oil</li>
+            <li><strong>MEELA’S NUTTYSPICY</strong> - Premium Dry Fruits, Nuts, and Spices</li>
+            <li><strong>SHARBATIGOLD</strong> - Atta and Flours</li>
+        </ul>
+        <p>Based on the research and survey, Sidharrth Rajah has formulated and registered the above brands under Maverico Technologies Pvt Ltd, and the products under these brand names shall be on shelves very soon.</p>
+    </div>
+
+    <div class="container text-center my-4">
+    <div class="row justify-content-center brand-logos">
+        <div class="col-md-4"><img src="sambhaar.png" alt="Sambhaar"></div>
+        <div class="col-md-4"><img src="meela's.png" alt="Meela's"></div>
+        <div class="col-md-4"><img src="gbuba.png" alt="GBUBA"></div>
+    </div>
+</div>
+
+<!-- Statistics Section -->
+<div class="container-fluid stats-section">
+    <div class="row text-center">
+        <div class="col-md-2"><span style="font-size: 24px;">2</span><br>Store in World</div>
+        <div class="col-md-2"><span style="font-size: 24px;">10</span><br>Fresh Farm</div>
+        <div class="col-md-2"><span style="font-size: 24px;">25+</span><br>Our Partner</div>
+        <div class="col-md-2"><span style="font-size: 24px;">5k+</span><br>Favorite Customer</div>
+        <div class="col-md-2"><span style="font-size: 24px;">Upto 10%</span><br>Online Discount</div>
+    </div>
+</div>
+
+<!-- Why Choose Us Section -->
+<div class="container why-choose-us">
+    <h4>Why Choose Us</h4>
+    <p>We are always committed to offering quality products at an affordable price, and customer satisfaction is our priority. Our commitment extends to our employees in making them learn, grow, and prosper personally and professionally. We value being community-minded and environmentally conscious.</p>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <!-- Our Vision -->
+        <div class="col-md-6 mb-4">
+            <div class="content-box">
+                <h2 class="section-title">Our Vision</h2>
+               <p> Sambhaar.com is here to make grocery shopping for Indian households financially savvy and convenient. We have a wide assortment of items mainly produced in India. As trendsetters in retail, we deliver from our store to your doorstep on the same day of placing an order, avoiding the troubles of dealing with intermediaries. With our warm and friendly service, we make sure to remind you of the next door shop experience.</p>
+
+<p>Maverico’s first pilot local project has gained the trust of its clients, and our loyal clients have certified us as their most favourite grocery store. The offline grocery stores today have a shopping experience that’s fulfilling for our customers who look for quality products at prices that are the best in town. The beautiful and helpful salespeople at the store make the shopping experience worthwhile.</p>
+
+<p>Sambhaar.com online store is one of the best when it comes to online grocery shopping. It’s time to do the grocery shopping from the comfort of your home. It could be a single day's requirement or a month's provision list, Sambhaar.com does it with care and delivers at the earliest. The experience about the product and the timely delivery has endeared us to the customers, and they vouch for the quality of the products. With some of the best discounts and getting them delivered in the shortest possible time, Sambhaar is here to revolutionise the entire online and offline grocery shopping experience. www.sambhaar.com</p>
+            </div>
+        </div>
+
+        <!-- Our Mission -->
+        <div class="col-md-6 mb-4">
+            <div class="content-box">
+                <h2 class="section-title">Our Mission</h2>
+               <p> In phase one, we aim to open a minimum of ten premium stores including three super warehouse sale points in India. Our vision is to create an online network of grocery retail spanning throughout India with all the household items, sorted according to your needs; this would make grocery shopping extremely easy. With a Sambhaar Super Warehouse or MEELA’S store within every 30 kms, Indian households would have their grocery shopping solved. Sambhaar is also devising a franchisee program to ensure Sambhaar Super Warehouse and MEELA’S stores are available to the people in all major cities and townships across India.</p>
+
+                <p>In phase one, Sambhaar aims to establish at least ten premium stores, including three super warehouse sale points across India. Our vision is to build a nationwide online grocery retail network, offering a seamless shopping experience with all household essentials tailored to your needs. With a Sambhaar Super Warehouse or MEELA'S store within every 30 km, grocery shopping for Indian households will become effortless. Additionally, we are developing a franchise program to expand Sambhaar Super Warehouse and MEELA'S stores to major cities and townships across the country.</p>
+            </div>
+        </div>
+    </div>
+</div><div class="container green-section">
+    <h2>Go Green With Us</h2>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1904/1904425.png" alt="Recycling">
+                </div>
+                <div class="feature-title">Our Super Quick Turnaround</div>
+                <div class="feature-text">Quality is retained throughout the process</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1903/1903321.png" alt="Organic">
+                </div>
+                <div class="feature-title">No Pesticides</div>
+                <div class="feature-text">Use completely organic</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1903/1903445.png" alt="Fast Delivery">
+                </div>
+                <div class="feature-title">Fastest & Free Shipping</div>
+                <div class="feature-text">The best quality when reaching the consumer</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <hr  style="border-style: solid;border-width: 3px;border-color: #dd3c06;">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> India | Qatar | UAE<br>
+                        <i class="fas fa-envelope"></i> support@sambhaar.com<br>
+                        <i class="fas fa-phone"></i> +91 818181 9368<br>
+                        <i class="fas fa-phone"></i> +91 818181 2912
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="bootstrap.html">Home</a></li>
+                        <li><a href="aboutuspage.html">About Us</a></li>
+                        <li><a href="p&p.html">Privacy Policy</a></li>
+                        <li><a href="terms&condition.html">Terms & Conditions</a></li>
+                        <li><a href="return&refund.html">Return & Refund Policy</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Shop Now</h4>
+                    <ul>
+                        <li><a href="#">Grocery Essentials</a></li>
+                        <li><a href="#">Dairy & Fresh Foods</a></li>
+                        <li><a href="#">Oils & Condiments</a></li>
+                        <li><a href="#">Sweets & Savouries</a></li>
+                        <li><a href="#">Beverages & Frozen Foods</a></li>
+                        <li><a href="#">Health & Personal Care</a></li>
+                        <li><a href="#">Cleaning & Household</a></li>
+                        <li><a href="#">Pooja Essentials</a></li>
+                        <li><a href="#">Stationery & Fancy Items</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Reset Password</a></li>
+                    </ul>
+                    <h4>Download Our App</h4>
+                    <p>Coming Soon...!</p>
+                    <img src="google-play.png" alt="Google Play">
+                    <img src="app-store.png" alt="App Store">
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 Sambhaar.com. All Rights Reserved. | Powered by <a href="https://maverico.com">Maverico.com</a></p>
+        </div>
+    </footer></div>
+</body>
+</html>
